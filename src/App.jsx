@@ -1,28 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.scss';
 import Form from "./components/Form"
 import TodoList from "./components/TodoList"
+import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
-
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-
-  // Use Effect Only Once App Start  ( "[]" this is provide)
   useEffect(() => {
     getLocalTodos();
   }, []);
 
-  // Use Effect
   useEffect(() => {
     filterHandler();
     saveLocalTodos();
   }, [todos, status]);
-
 
   const filterHandler = () => {
     switch (status) {
@@ -54,7 +49,7 @@ function App() {
   }
 
   return (
-    <div className="App c-app">
+    <div className="c-app">
       <header>
         <h1>Todo App</h1>
       </header>

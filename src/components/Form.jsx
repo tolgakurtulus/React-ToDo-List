@@ -20,7 +20,6 @@ const Form = ({ setInputText, todos, setTodos, inputText, setStatus }) => {
     }
 
     return (
-
         <form className="c-form">
             <input
                 type="text"
