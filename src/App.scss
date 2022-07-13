@@ -83,6 +83,9 @@ select {
     &.completed {
         text-decoration: line-through;
         opacity: 0.8;
-
     }
+}
+
+.c-green {
+    color: rgb(0, 255, 0);
 }
