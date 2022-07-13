@@ -22,7 +22,7 @@ const Todo = ({ text, todo, todos, setTodos }) => {
                 {text}
             </li>
             <div className="c-button-group">
-                <button onClick={completeHandler} className="complete-btn"><i className="fas fa-check"></i></button>
+                <button onClick={completeHandler} className={`complete-btn ${todo.completed ? "c-green" : ""}`}><i className="fas fa-check"></i></button>
                 <button onClick={deleteHandler} className="trash-btn"><i className="fas fa-trash"></i></button>
             </div>
         </div>
